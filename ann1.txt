@@ -1,0 +1,27 @@
+
+Linear function: Equation : Linear function has the equation similar to as of a straight line i.e. y = x
+No matter how many layers we have, if all are linear in nature, the final activation function of last layer is nothing but just a linear function of the input of first layer.
+Range : -inf to +inf
+Uses : Linear activation function is used at just one place i.e. output layer.
+Issues : If we will differentiate linear function to bring non-linearity, result will no more depend on input “x” and function will become constant, it won’t introduce any ground-breaking behavior to our algorithm.
+
+sigmoid function: It is a function which is plotted as ‘S’ shaped graph.
+Equation : A = 1/(1 + e-x)
+Nature : Non-linear. Notice that X values lies between -2 to 2, Y values are very steep. This means, small changes in x would also bring about large changes in the value of Y.
+Value Range : 0 to 1
+Uses : Usually used in output layer of a binary classification, where result is either 0 or 1, as value for sigmoid function lies between 0 and 1 only so, result can be predicted easily to be 1 if value is greater than 0.5 and 0 otherwise.
+
+tanh function: The activation that works almost always better than sigmoid function is Tanh function also known as Tangent Hyperbolic function. It’s actually mathematically shifted version of the sigmoid function. Both are similar and can be derived from each other.
+Equation :-
+f(x) = tanh(x) = 2/(1 + e-2x) – 1
+OR
+tanh(x) = 2 * sigmoid(2x) – 1
+Value Range :- -1 to +1
+Nature :- non-linear
+Uses :- Usually used in hidden layers of a neural network as it’s values lies between -1 to 1 hence the mean for the hidden layer comes out be 0 or very close to it, hence helps in centering the data by bringing mean close to 0. This makes learning for the next layer much easier.
+
+relu function: It Stands for Rectified linear unit. It is the most widely used activation function. Chiefly implemented in hidden layers of Neural network.
+Equation :- A(x) = max(0,x). It gives an output x if x is positive and 0 otherwise.
+Value Range :- [0, inf)
+Nature :- non-linear, which means we can easily backpropagate the errors and have multiple layers of neurons being activated by the ReLU function.
+Uses :- ReLu is less computationally expensive than tanh and sigmoid because it involves simpler mathematical operations. At a time only a few neurons are activated making the network sparse making it efficient and easy for computation.
